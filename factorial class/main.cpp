@@ -2,13 +2,12 @@
 using namespace std;
 class ABC
 {
-    int num,itt,factorial=1;
+    int num,factorial=1;
     public:
     void input()
     {
         cout<<"Enter the number : ";
         cin>>num;
-        itt=num;
     }
 
     void output()
@@ -23,11 +22,15 @@ class ABC
         }
         if(num>0)
         {
-            while(itt>0)
-                {
-                    factorial*=itt;
-                    itt-=1;
-                }
+            for(int i = 1;i<=num;i++)
+            {
+                factorial*=i;
+            }
+/*       while(itt>0)
+            {
+                factorial*=itt;
+                itt-=1;
+            }*/
         cout<<"Factorial of " << num << " is : " << factorial << endl;
         }
     }

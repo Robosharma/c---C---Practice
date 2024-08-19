@@ -10,7 +10,7 @@ class ACCOUNT
         string name_of_accountholder;
         long int acc_number;
         string type_of_account;
-        long int balance_ammount;
+        long int balance_amount;
     };
 
     acc_details ad[2];
@@ -27,7 +27,7 @@ class ACCOUNT
             cout << "Enter account holder " << i+1 << " type of account : ";
             cin >> ad[i].type_of_account;
             cout << "Enter account holder " << i+1 << " balance amount : ";
-            cin >> ad[i].balance_ammount;
+            cin >> ad[i].balance_amount;
             cout << "\n\n";
         }
     }
@@ -42,7 +42,7 @@ class ACCOUNT
             {
                 cout << "Enter amount to be deposited : ";
                 cin >> deposit_amount;
-                ad[i].balance_ammount+=deposit_amount;
+                ad[i].balance_amount+=deposit_amount;
                 cout << "\n\nAmount is succsfully deposited to your account.\n\n";
                 found=0;
                 break;
@@ -67,14 +67,14 @@ class ACCOUNT
             {
                 cout << "Enter amount to be withdrawal : ";
                 cin >> wid_amount;
-                if(wid_amount <= ad[i].balance_ammount)
+                if(wid_amount <= ad[i].balance_amount)
                 {
-                    ad[i].balance_ammount-=wid_amount;
+                    ad[i].balance_amount-=wid_amount;
                     cout << "\n\nAmount is succsfully withdrawal from account.\n\n";
                 }
-                if(wid_amount > ad[i].balance_ammount)
+                if(wid_amount > ad[i].balance_amount)
                 {
-                    cout << "\n\nNot info funds in your account!\n\n";
+                    cout << "\n\nNot enough funds in your account!\n\n";
                 }
                 found=0;
                 break;
@@ -103,7 +103,7 @@ class ACCOUNT
             cout << setw(20) << left << ad[i].name_of_accountholder 
                  << setw(40) << left << ad[i].acc_number
                  << setw(10) << left << ad[i].type_of_account
-                 << setw(30) << left << ad[i].balance_ammount
+                 << setw(30) << left << ad[i].balance_amount
                  <<"\n";
             
         }
