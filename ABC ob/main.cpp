@@ -12,7 +12,7 @@ class ABC
         cin>>b;
     }
 
-    int output()
+    void output()
     {
         cout<<"Sum of the two numbers is : " << a+b;
     }
