@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip>
 using namespace std;
 
 class ACCOUNT
@@ -73,7 +74,7 @@ class ACCOUNT
                 }
                 if(wid_amount > ad[i].balance_ammount)
                 {
-                    cout << "Not info funds in your account!";
+                    cout << "\n\nNot info funds in your account!\n\n";
                 }
                 found=0;
                 break;
@@ -90,12 +91,21 @@ class ACCOUNT
     void display_acc_holders()
     {
         cout << "All account holder details,\n\n";
+        cout << setw(20) << left << "Name"
+             << setw(40) << left << "account Number"
+             << setw(10) << left << "Tyoe of account"
+             << setw(30) << left << "Balance amount"
+             << "\n\n";
+        
         for( int i = 0 ; i<2 ; i++)
         {
-            cout << "Name : " << ad[i].name_of_accountholder << endl;
-            cout << "Account number  : " << ad[i].acc_number << endl;
-            cout << "Type of account  : " << ad[i].type_of_account << endl;
-            cout << "Balance amount : " << ad[i].balance_ammount << endl;
+
+            cout << setw(20) << left << ad[i].name_of_accountholder 
+                 << setw(40) << left << ad[i].acc_number
+                 << setw(10) << left << ad[i].type_of_account
+                 << setw(30) << left << ad[i].balance_ammount
+                 <<"\n";
+            
         }
     }
     
