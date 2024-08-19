@@ -12,7 +12,7 @@ class STUDENT
         cin >> name;
         cout << "Roll number : ";
         cin >> roll_no;
-        cout << "Enter your marks in 5 core subjects in any order.";
+        cout << "Enter your marks in 5 core subjects in any order.\n\n";
         for(int i=0;i<5;i++)
         {
             cout << "Marks of subject " << i+1 << " : ";
