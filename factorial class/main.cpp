@@ -2,7 +2,7 @@
 using namespace std;
 class ABC
 {
-    int num,itt;
+    int num,itt,factorial=1;
     public:
     void input()
     {
@@ -13,7 +13,6 @@ class ABC
 
     void output()
     {
-        int factorial=1;
         if(num<0)
         {
             cout<<"Error : Factorial of a negitive number doesn't exist!" << endl;
@@ -24,15 +23,11 @@ class ABC
         }
         if(num>0)
         {
-            for(int i = 1;i>=itt;i++)
-            {
-                factorial*=itt;
-            }
-       while(itt>0)
-            {
-                factorial*=itt;
-                itt-=1;
-            }
+            while(itt>0)
+                {
+                    factorial*=itt;
+                    itt-=1;
+                }
         cout<<"Factorial of " << num << " is : " << factorial << endl;
         }
     }
