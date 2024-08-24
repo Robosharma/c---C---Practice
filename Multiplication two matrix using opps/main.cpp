@@ -100,6 +100,22 @@ class MATRIXMULTIPLICTION
             cout << endl;
         }
     }
+
+        ~MATRIXMULTIPLICTION() 
+        {
+
+            for (int i = 0; i < n; i++) 
+            {
+                delete[] arr1[i];
+            }
+                delete[] arr1;
+
+            for (int i = 0; i < k; i++) 
+            {
+                delete[] arr2[i];
+            }
+                delete[] arr2;
+    }
     
 };
 
