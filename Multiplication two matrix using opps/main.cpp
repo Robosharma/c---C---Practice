@@ -18,14 +18,19 @@ class MATRIXMULTIPLICTION
         cin >> k;
         cout << "Enter number of colunms for first arrar";
         cin >> l;
+        
+        if(n!=l)
+        {
+            cout << "Multiplication not possible!" << endl;
+        }
 
-        int** arr1 = new int*[n];
+        arr1 = new int*[n];
         for(int i=0;i<n;i++)
         {
             arr1[i] = new int[m];
         }
 
-        int** arr2 = new int*[k];
+        arr2 = new int*[k];
         for(int i=0;i<k;i++)
         {
             arr2[i] = new int[l];
@@ -40,6 +45,7 @@ class MATRIXMULTIPLICTION
         }
         else
         {
+            cout << "Enter elements of first Matrix :" << endl ;
             for(int i = 0 ; i<n ; i++)
             {
                 for(int j = 0 ; j < m ; j++)
@@ -47,12 +53,13 @@ class MATRIXMULTIPLICTION
                     cin >> arr1[i][j];
                 }
             }
+            cout << "Enter elements of Second Matrix :" << endl ;
 
             for(int i = 0 ; i<k ; i++)
             {
                 for(int j = 0 ; j < l ; j++)
                 {
-                    cin >> arr1[i][j];
+                    cin >> arr2[i][j];
                 }
             }
         }
@@ -60,21 +67,50 @@ class MATRIXMULTIPLICTION
 
     void display()
     {
+        cout << "Fisrt Matrix :" << endl;
         for(int i = 0 ; i<n ; i++)
             {
                 for(int j = 0 ; j < m ; j++)
                 {
-                    cout << arr1[i][j];
+                    cout << arr1[i][j] << " ";
                 }
+                cout << "\n";
             }
 
+            cout << "Second Matrix :" << endl;
             for(int i = 0 ; i<k ; i++)
             {
                 for(int j = 0 ; j < l ; j++)
                 {
-                    cout << arr1[i][j];
+                    cout << arr2[i][j] << " ";
                 }
+                cout << "\n";
             }
+    }
+
+    void matrixmultiply()
+    {
+        cout << "Final matrix after multipliaction is :" << endl;
+        for(int i=0;i<l;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                cout << arr1[i][j]*arr2[j][i] << " ";
+            }
+            cout << endl;
+        }
     }
     
 };
+
+int main()
+{
+    MATRIXMULTIPLICTION ob;
+    ob.start();
+    ob.input();
+    system("cls");
+    ob.display();
+    ob.matrixmultiply();
+    
+    return 0;
+}
