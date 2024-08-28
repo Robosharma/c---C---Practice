@@ -67,6 +67,6 @@ int main()
     ob.input();
     ob.stream_checker();
     cout << "\nWritten by:\n";
-    cout << "AMAN KUMAR \nEnroll number 03113203123 \nBranch IT 1 sem 2";
+    cout << "AMAN KUMAR \nEnroll number 03113203123 \nBranch IT 1 sem 3";
     return 0;
 }

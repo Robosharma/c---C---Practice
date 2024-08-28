@@ -10,13 +10,13 @@ class MATRIXMULTIPLICTION
 
     void start()
     {
-        cout << "Enter number of rows for first arrar";
+        cout << "Enter number of rows for first arrary : ";
         cin >> n;
-        cout << "Enter number of colunms for first arrar";
+        cout << "Enter number of colunms for first arrary : ";
         cin >> m;
-        cout << "Enter number of rows for first arrar";
+        cout << "Enter number of rows for first arrary : ";
         cin >> k;
-        cout << "Enter number of colunms for first arrar";
+        cout << "Enter number of colunms for first arrary : ";
         cin >> l;
         
         if(n!=l)
@@ -127,6 +127,8 @@ int main()
     system("cls");
     ob.display();
     ob.matrixmultiply();
+    cout << "\nWritten by:\n";
+    cout << "AMAN KUMAR \nEnroll number 03113203123 \nBranch IT 1 sem 3";
     
     return 0;
 }
