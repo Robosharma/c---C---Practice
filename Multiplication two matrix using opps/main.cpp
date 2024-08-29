@@ -22,6 +22,7 @@ class MATRIXMULTIPLICTION
         if(n!=l)
         {
             cout << "Multiplication not possible!" << endl;
+            exit(0);
         }
 
         arr1 = new int*[n];
