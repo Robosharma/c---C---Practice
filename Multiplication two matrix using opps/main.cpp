@@ -14,9 +14,9 @@ class MATRIXMULTIPLICTION
         cin >> n;
         cout << "Enter number of colunms for first arrary : ";
         cin >> m;
-        cout << "Enter number of rows for first arrary : ";
+        cout << "Enter number of rows for Second arrary : ";
         cin >> k;
-        cout << "Enter number of colunms for first arrary : ";
+        cout << "Enter number of colunms for Second arrary : ";
         cin >> l;
         
         if(n!=l)
